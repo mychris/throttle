@@ -31,6 +31,19 @@ OPTIONS
        -h     output a help and exit
 
 
+EXAMPLES
+       Piping through throttle should be very slowest
+              $ dd if=/dev/zero bs=4K count=1K | throttle >/dev/null
+
+
+       Using the -f option should speed up the process
+              $ dd if=/dev/zero bs=4K count=1K | throttle -f >/dev/null
+
+
+       Not using throttle at all is the fastest of the three examples
+              $ dd if=/dev/zero bs=4K count=1K >/dev/null
+
+
 AUTHOR
        Written by Christoph Göttschkes.
 
@@ -42,4 +55,4 @@ COPYRIGHT
 
 
 
-throttle 1.0.0                    2015-03-22                       THROTTLE(1)
+throttle 1.0.0                    2015-03-28                       THROTTLE(1)

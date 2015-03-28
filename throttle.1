@@ -21,7 +21,7 @@
 .\" DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 .\" OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 .\" USE OR OTHER DEALINGS IN THE SOFTWARE.
-.TH THROTTLE 1 "2015-03-22" "throttle VERSION" "Commands"
+.TH THROTTLE 1 "2015-03-28" "throttle VERSION" "Commands"
 
 .SH NAME
 
@@ -57,6 +57,20 @@ output version information and exit
 .TP
 .BR \-h
 output a help and exit
+
+.SH EXAMPLES
+
+.TP
+Piping through \fBthrottle\fR should be very slowest
+$ dd if=/dev/zero bs=4K count=1K | throttle >/dev/null
+
+.TP
+Using the \fB\-f\fR option should speed up the process
+$ dd if=/dev/zero bs=4K count=1K | throttle -f >/dev/null
+
+.TP
+Not using \fBthrottle\fR at all is the fastest of the three examples
+$ dd if=/dev/zero bs=4K count=1K >/dev/null
 
 .SH AUTHOR
 
