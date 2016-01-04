@@ -2,7 +2,7 @@
  *
  * MIT License
  *
- * Copyright (c) 2015 Christoph Göttschkes
+ * Copyright (c) 2015-2016 Christoph Göttschkes
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -28,6 +28,7 @@
 #include <errno.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sched.h>
 
 #ifndef VERSION
 #define VERSION "n/a"
@@ -75,10 +76,12 @@ static int run(void) {
 			fprintf(stderr, "%s: getchar: %s\n", prog_name, strerror(errno));
 			return -1;
 		}
+		sched_yield();
 		if (putchar(c) == EOF) {
 			fprintf(stderr, "%s: putchar: %s\n", prog_name, strerror(errno));
 			return -1;
 		}
+		sched_yield();
 	}
 }
 

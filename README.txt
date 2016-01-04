@@ -49,10 +49,10 @@ AUTHOR
 
 
 COPYRIGHT
-       Copyright (c) 2015 Christoph Göttschkes.
+       Copyright (c) 2015-2016 Christoph Göttschkes.
 
        Released under MIT license.
 
 
 
-throttle 1.0.0                    2015-03-28                       THROTTLE(1)
+throttle 1.1.0                    2015-03-28                       THROTTLE(1)
