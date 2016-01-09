@@ -5,19 +5,15 @@ VERSION = 1.1.0
 
 # paths
 PREFIX = /usr/local
-MANPREFIX = ${PREFIX}/share/man
-
-# includes and libs
-INCS =
-LIBS =
+MANPREFIX = $(PREFIX)/share/man
 
 # flags
-CPPFLAGS = -DVERSION=\"${VERSION}\"
-CFLAGS = -std=c99 -pedantic \
-		 -Wall -Wextra -Werror -Wno-deprecated-declarations \
-		 -O0 \
-		 ${INCS} ${CPPFLAGS}
-LDFLAGS = ${LIBS}
+CPPFLAGS = -DVERSION=\"$(VERSION)\"
+CFLAGS   = -std=c99 -pedantic
+CFLAGS  += -Wall -Wextra -Werror -Wno-deprecated-declarations
+CFLAGS  += -O0
+LDFLAGS  =
+LDLIBS   =
 
 # compiler, linker, and other tools
 CC = gcc
