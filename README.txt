@@ -12,9 +12,9 @@ SYNOPSIS
 
 DESCRIPTION
        throttle  transfers  all  data  from its standard input to its standard
-       output.  Unlike the normal pipe, the data is  read  into  the  programs
-       memory  and  the  printed out again.  This slows down the data transfer
-       significantly.
+       output.  Unlike the normal pipe, the data is first read into  the  pro‐
+       grams  memory and then written to is standard output again.  This slows
+       down the data transfer significantly.
 
        This tool is designed to be used for testing other command line  utili‐
        ties.

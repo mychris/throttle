@@ -37,14 +37,14 @@
 
 .B throttle
 transfers all data from its standard input to its standard output.
-Unlike the normal pipe, the data is read into the programs memory and the
-printed out again.
+Unlike the normal pipe, the data is first read into the programs memory and
+then written to is standard output again.
 This slows down the data transfer significantly.
 
 This tool is designed to be used for testing other command line utilities.
 
-In \fIfast mode\fR, the C library I/O buffering remains enabled and might speed up the
-transfer process.
+In \fIfast mode\fR, the C library I/O buffering remains enabled and might speed
+up the transfer process.
 
 .SH OPTIONS
 
